@@ -16,8 +16,7 @@
 .header-container,
 .projects-container,
 .site-information-container,
-.title,
-/* .empty-div, */
+.dashboard,
 .home, 
 .profile,
 .messages,
@@ -32,8 +31,15 @@
 
 .sidebar-content {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(12, 1fr); /*includes two empty div containers*/
+    grid-template-columns: 1fr 5fr;
+    gap: 15px;
+    height: 50%;
+}
+
+.sidebar-content-icons,
+.sidebar-content-text {
+    display: grid;
+    grid-template-rows: repeat(12, 50px); /*includes two empty div containers*/
     gap: 15px;
     height: 50%;
 }
