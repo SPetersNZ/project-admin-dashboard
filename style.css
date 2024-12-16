@@ -1,6 +1,9 @@
 * {
     margin: 0;
     padding: 0;
+    --blue-color: #60a5fa;
+    --large-profile-picture: 75px;
+    --small-profile-picture: 50px;
 }
 
 .body {
@@ -29,7 +32,7 @@
 }
 
 .sidebar-container {
-    background-color: #2563eb;
+    background-color: var(--blue-color);
 }
 
 .sidebar-content {
@@ -87,7 +90,8 @@
 .search-bar-container,
 .profile-notifications-container,
 .username-container,
-.buttons-container {
+.buttons-container,
+.trending-user-container {
     display: flex;
     align-items: center;
     border: 1px solid black;
@@ -107,6 +111,11 @@
     justify-content: space-between;
 }
 
+.profile-notifications-container > img {
+    width: var(--small-profile-picture);
+    height: var(--small-profile-picture);
+}
+
 .username-text {
     margin-left: 10px;
     align-self: center;
@@ -115,6 +124,8 @@
 .user-profile-picture {
     border: 1px solid black;
     border-radius: 50%;
+    height: var(--large-profile-picture);
+    width: var(--large-profile-picture);
 }
 
 .buttons-container {
@@ -124,7 +135,7 @@
 
 .buttons-container > button {
     color: white;
-    background-color: #2563eb;
+    background-color: var(--blue-color);
     border-radius: 50px;
     width: 150px;
     height: 45px;
@@ -155,12 +166,7 @@
 }
 
 .projects-heading,
-.super-cool-project,
-.less-cool-project,
-.impossible-app,
-.easy-peasy-app,
-.adblocker,
-.money-maker {
+.project-card {
     border: 1px solid black;
 }
 
@@ -178,11 +184,15 @@
 }
 
 .site-info-heading,
-.site-maintenance,
-.community-share-day,
-.updated-privacy-policy,
+.site-info-message,
 .empty-div,
-.trending-user {
+.trending-user-container {
     border: 1px solid black;
-    grid-column: 1 / 2;
+}
+
+.trending-user-container > img {
+    border: 1px solid black;
+    border-radius: 50%;
+    height: var(--large-profile-picture);
+    width: var(--large-profile-picture);
 }
