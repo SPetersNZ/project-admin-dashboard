@@ -175,12 +175,24 @@
     grid-row: 1 / 2;
 }
 
-.site-information-content {
+/* unsure as to why this height entry is changing the spacing of the announcement and trending divs? */
+.site-information-container {
     display: grid;
-    /* grid-template-columns: 1fr; */
-    grid-template-rows: 30px repeat(3, 125px) 30px repeat(4, 125px);
+    height: 80%;
+}
+
+.site-information-announcements {
+    display: grid;
+    grid-template-rows: 30px repeat(3, 125px);
     gap: 15px;
     height: 100%;
+}
+
+.site-information-users {
+    display: grid;
+    grid-template-rows: 30px repeat(4, 125px);
+    gap: 15px;
+    height: 100%; 
 }
 
 .site-info-heading,
